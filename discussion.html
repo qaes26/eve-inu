@@ -82,7 +82,7 @@
             transform: translateY(-3px);
         }
         
-        /* تذييل الصفحة - تم تأكيد اللون الأبيض هنا */
+        /* تذييل الصفحة - اللون الأبيض المؤكد */
         footer {
             width: 100%;
             padding: 15px 0;
@@ -118,7 +118,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // قائمة الأسئلة الـ 50 الجديدة (مركزة على قضايا الطالب والسيرة النبوية)
             const questions = [
                 // **قضايا الطالب الأكاديمية والإدارية (15 سؤال)**
                 "كيف يمكن للطالب أن يوازن بفعالية بين الدراسة الجامعية والعمل الجزئي أو الأنشطة اللامنهجية دون المساس بالتحصيل العلمي؟",
@@ -192,7 +191,6 @@
                 discussionQuestionDiv.innerHTML = randomQuestion;
             }
 
-            // ضمان ربط الدالة بحدث الضغط على الزر
             startDiscussionBtn.addEventListener('click', displayRandomQuestion);
 
             discussionQuestionDiv.innerHTML = "أهلاً بك أيها الطالب! اضغط على زر **بدء النقاش** لتبدأ التفكير في تحدياتك وقضاياك.";
