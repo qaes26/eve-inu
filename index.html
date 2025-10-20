@@ -87,7 +87,7 @@
             width: 100%;
             padding: 15px 0;
             background-color: var(--primary-color);
-            color: white; /* **تطبيق اللون الأبيض على كل نص التذييل** */
+            color: white; 
             font-size: 0.9em;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
@@ -96,7 +96,7 @@
         /* تعديل لون اسم الطالب للتأكيد فقط */
         footer span {
             font-weight: 700;
-            color: white; /* تأكيد أن الاسم أبيض وسميك */
+            color: white;
         }
     </style>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
@@ -123,7 +123,11 @@
     </footer>
 
     <script>
-        const discussionPageUrl = window.location.protocol + "//" + window.location.host + "/discussion.html";
+        // **التعديل لحل مشكلة 404 على GitHub Pages**
+        // يجب أن نستخدم المسار الكامل: https://qaes26.github.io/eve-inu/discussion.html
+        const repoName = "eve-inu"; // تأكد من أن هذا هو اسم مستودعك بالضبط
+        const baseUrl = window.location.protocol + "//" + window.location.host; 
+        const discussionPageUrl = baseUrl + "/" + repoName + "/discussion.html";
         
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: discussionPageUrl,
