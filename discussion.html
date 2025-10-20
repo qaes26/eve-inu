@@ -25,6 +25,8 @@
             margin: 0;
             color: var(--text-color);
             padding: 20px;
+            /* حجم خط أساسي مقبول للوصول */
+            font-size: 16px; 
         }
         .card {
             background-color: var(--card-color);
@@ -40,11 +42,11 @@
         h1 {
             color: var(--primary-color);
             margin-bottom: 20px;
-            font-size: 2.8rem; /* استخدمنا rem */
+            font-size: 2.8rem;
             font-weight: 700;
         }
         p {
-            font-size: 1.2rem; /* استخدمنا rem */
+            font-size: 1.2rem;
             color: #6c757d;
             margin-bottom: 30px;
         }
@@ -100,18 +102,20 @@
         }
 
         /* ********************************************* */
-        /* استعلام الوسائط: تعديل الأنماط للهواتف (عرض 480 بكسل أو أقل) */
+        /* استعلام الوسائط: تعديل الأنماط للهواتف (عرض 600 بكسل أو أقل) */
         /* ********************************************* */
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
+            /* تقليل حجم الخط الأساسي لـ body مما يؤثر على جميع وحدات rem */
             body {
-                padding: 10px; /* تقليل الحشو حول الصفحة */
+                font-size: 14px; /* تصغير حجم الخط الأساسي */
+                padding: 10px;
             }
             .card {
-                padding: 20px 15px; /* تقليل التباعد الداخلي للبطاقة */
+                padding: 20px 15px;
                 margin-top: 10px;
             }
             h1 {
-                font-size: 1.8rem; /* تقليل حجم العنوان الرئيسي بقوة */
+                font-size: 2rem; /* تم تصغيره بناءً على حجم الخط الأساسي الجديد */
                 margin-bottom: 15px;
             }
             p {
@@ -119,11 +123,11 @@
                 margin-bottom: 20px;
             }
             #discussion-question {
-                /* **تصغير حجم الخط داخل مربع السؤال بشكل أكبر** */
-                font-size: 1.1rem; 
+                /* **استخدام وحدة vw لضمان التجاوب المطلق مع عرض الشاشة** */
+                font-size: 4.5vw; /* حجم الخط سيكون 4.5% من عرض الشاشة */
                 padding: 15px;
                 min-height: 120px;
-                line-height: 1.6; /* للحفاظ على سهولة القراءة */
+                line-height: 1.6;
             }
             #start-discussion-btn {
                 font-size: 1.1rem;
